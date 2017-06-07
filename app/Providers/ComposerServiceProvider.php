@@ -6,7 +6,7 @@ use App\Http\ViewComposers\AreaComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
-class AreaComposerProvider extends ServiceProvider
+class ComposerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -25,6 +25,6 @@ class AreaComposerProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(AreaComposer::class);
     }
 }
