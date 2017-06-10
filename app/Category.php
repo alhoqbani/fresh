@@ -10,5 +10,11 @@ class Category extends Model
     
     use NodeTrait;
     
-    protected $guarded;
+    protected $guarded = [];
+    
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
 }
